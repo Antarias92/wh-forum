@@ -13,4 +13,4 @@ app.use(bodyParser.json());
 
 app.listen(3000, () => console.log("Server is running on localhost: 3000"));
 
-//DO NODE SERVER.JS IN THE TERMINAL !!!!!!!!!!!!!!!!!!
+//DO NODE SERVER.JS IN THE TERMINAL ?
