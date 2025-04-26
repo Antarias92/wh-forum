@@ -37,7 +37,30 @@
   }
 }*/
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body{
+  background: #e3e2df !important;
   display: flex;
-  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.register_content{
+  background-color: lightblue;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden; 
+  width: 50vw;
+  min-height: 480px;
+  max-width: 100%;
+}
+
+.right_box{
+  padding: 40px 30px 40px 40px;
 }
