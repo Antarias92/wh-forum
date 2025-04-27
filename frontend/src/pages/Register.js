@@ -1,8 +1,21 @@
 import React from "react";
 
 const Register = () => {
+    function switchContent(){
+        const content = document.getElementById("content");
+        const registerButton = document.getElementById("register");
+        const loginButton = document.getElementById("login");
+
+        registerButton.addEventListener("click", () => {
+            content.classList.add("active");
+        });
+        loginButton.addEventListener("click", () => {
+            content.classList.remove("active");
+        });
+    }
+
     return(
-        <div className="register_content justify-content-center align-items-center d-flex shadow-lg">
+        <div className="content justify-content-center align-items-center d-flex shadow-lg" id="content">
             {/*-----Register Section-----*/}
             <div className="col-md-6 d-flex justify-content-center">
                 <form>
@@ -14,11 +27,11 @@ const Register = () => {
                         <input type="text" className="form-control" placeholder="Enter Username" required/>
                     </div>
                     <div className="input_group mb-3">
-                        <label htmlFor="username">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input type="email" className="form-control" placeholder="Enter Email" required/>
                     </div>
                     <div className="input_group mb-3">
-                        <label htmlFor="username">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input type="text" className="form-control" placeholder="Enter Password" required/>
                     </div>
                     <button className="btn btn-primary">Submit</button>
@@ -52,8 +65,12 @@ const Register = () => {
             <div className="switch_content">
                 <div className="switch">
                     <div className="switch_section switch_left">
-                        <h2>Welcome Back</h2>
-                        
+                        <h1>Welcome Back</h1>
+                        <button className="hidden btn border-white text-white" id="login" onClick={switchContent}>Login</button>
+                    </div>
+                    <div className="switch_section switch_right">
+                        <h1>Welcome to Warhammer Forum</h1>
+                        <button className="hidden btn btn-warning" id="register" onClick={switchContent}>Register</button>
                     </div>
                 </div>
 
